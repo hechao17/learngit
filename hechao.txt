@@ -1,1 +1,42 @@
 new github
+
+1. 在Windows上安装Git
+	直接官网安装https://git-scm.com/downloads
+	国内镜像地址是https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit
+
+2. 安装完成后，设置用户名和邮件
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
+
+3. 在合适的目录下，建立git仓库，会建立.git的隐藏文件夹
+$ git init
+
+
+
+cmd:
+新建文件夹learngit
+$ mkdir learngit
+
+切换目录
+$ cd learngit
+
+显示当前的目录
+$ pwd
+
+查看包括隐藏的文件夹目录
+ls -ah
+
+把文件添加到仓库
+$ git add readme.txt
+
+把文件提交到仓库
+$ git commit -m "wrote a readme file"
+
+关联一个远程库
+git remote add origin git@server-name:path/repo-name.git
+
+关联后,第一次推送master分支的所有内容
+git push -u origin master
+
+此后，每次本地提交后，推送最新修改
+git push origin master
