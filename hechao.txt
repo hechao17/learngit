@@ -11,8 +11,16 @@ new github
 3. 在合适的目录下，建立git仓库，会建立.git的隐藏文件夹
 $ git init
 
+4. 工作区，暂存区（stage），仓库（master）
 
+5. 有了github账号后，远程和本地是通过SSH协议加密传输的
+	1. 所以先要创建SSH key， 在本地主用户目录中检查是否有id_sra和id_sra.pub这两个文件，如果有了就可以直接跳过，如果没有则创建
+	$ssh-keygen -t rsa -C "he-128@163.com"
 
+	2. 登录github 打开account setting 在ssh keys界面填写任意的title并将
+	id_sra.pu中的内容拷贝到key中。后确定。
+	
+-----------------------------------------------------------
 cmd:
 新建文件夹learngit
 $ mkdir learngit
@@ -26,6 +34,7 @@ $ pwd
 查看包括隐藏的文件夹目录
 ls -ah
 
+-----------------------------------------------------------
 把文件添加到仓库
 $ git add readme.txt
 
@@ -36,6 +45,39 @@ $ git commit -m "wrote a readme file"
 $ git status
 $ git status -s  （short）简单显示版本
 
+查看保存的版本
+$ git log
+$ git log --pretty=oneline    简单显示版本
+
+查看git log的记录，每一次git的记录
+$git reflog
+
+git保存的版本，HEAD^表示上一个版本，HEAD^^表示上上个版本，HEAD~100表示往上第100个版本
+退回到上个版本
+$git reset --hard HEAD^
+也可以自由切换到任何版本，只需要记住git log中的版本号
+$git reset --hard 364856        (git reset --hard commit-id)
+
+修改了一个文件，还没有add提交暂存区，丢弃工作区的修改
+$git checkout -- readme.txt
+
+修改了一个文件，而且已经add了，还没有commit，此时吧暂存区中的内容撤销到工作区
+$git reset HEAD readme.txt
+然后在使用git checkout 指令将工作区的内容清空
+如果已经commit了，那么就需要退回版本。
+如果已经推送到远程库，那就哭了。
+
+直接删除文件
+$ rm test.txt
+此时git知道文件发生了变化，git status也可以看出来
+如果确实要从git库中删除此文件，则
+$git rm test.txt
+并且提交
+$git commit -m "remove test.txt"
+如果是误操作，需要恢复文件
+$git checkout -- test.txt
+
+-----------------------------------------------------------
 关联一个远程库
 git remote add origin git@server-name:path/repo-name.git
 
