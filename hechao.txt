@@ -32,6 +32,10 @@ $ git add readme.txt
 把文件提交到仓库
 $ git commit -m "wrote a readme file"
 
+查看git状态
+$ git status
+$ git status -s  （short）简单显示版本
+
 关联一个远程库
 git remote add origin git@server-name:path/repo-name.git
 
