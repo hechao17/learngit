@@ -138,6 +138,29 @@ git mv file_a file_b  重命名文件
 检查远程仓库
 git remote show origin
 
+--注释标签
+创建标签
+git tag -a v1.0 -m "my version v1.0"
+
+查看标签
+git tag
+git show v1.0
+
+tips  在一行显示所有的提交版本
+git log --pretty=oneline
+
+分支管理
+git branch testing 			创建
+git checkout testing		切换到分支
+git log --oneline --decorate --graph --all		可以显示版本情况-分支信息
+
+将dev分支合并到master
+git checkout master
+git merge dev
+
+
+
+
 
 
 
