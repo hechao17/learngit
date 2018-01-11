@@ -38,6 +38,7 @@ ls -ah
 把文件添加到仓库
 $ git add readme.txt
 
+
 把文件提交到仓库
 $ git commit -m "wrote a readme file"
 
@@ -160,6 +161,15 @@ git merge dev
 
 删除dev分支
 git branch -d dev
+
+
+-------------------------------------------------------------------
+-------------------fore day---------------------------------------
+.gitignore
+中忽略文件夹的方法是：比如 Debug 文件夹
+Debug/ 
+
+git add .  是提交全部文件
 
 
 
