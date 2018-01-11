@@ -21,6 +21,20 @@
 
 
 ## 新知识
-1. ![](https://github.com/hechao17/Modbus-RTU/raw/master/md_pic/wechat.png)在README.md中添加一张图片的方法` ![](xxx)` xxx表示网址，我们可以引用网站的图片地址，也可以使用上传到github中，比如实例中，我们hechao17是我的github，Modbus-RTU是项目名称，在这个项目中有一个文件夹md_pic，我们引用了wechat.png这张图片。
-2. 
- 
+#### 关于README.md
+1. `![](https://github.com/hechao17/Modbus-RTU/raw/master/md_pic/wechat.png)`在README.md中添加一张图片的方法` ![](xxx)` xxx表示网址，我们可以引用网站的图片地址，也可以使用上传到github中，比如实例中，我们hechao17是我的github，Modbus-RTU是项目名称，在这个项目中有一个文件夹md_pic，我们引用了wechat.png这张图片。
+2. `<br>`用于普通的文本的换行
+3. 应用一个连接 [阿莫电子论坛](https://www.amobbs.com "打开论坛")，操作`[阿莫电子论坛](https://www.amobbs.com "打开论坛")`
+
+
+----------
+![](https://github.com/hechao17/Modbus-RTU/raw/master/md_pic/wechat.png)
+
+Email: he-128@163.com
+
+Q Q : 357407542
+
+----------
+
+
+
